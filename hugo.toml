@@ -1,3 +1,172 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = "https://yassiramjoud.github.io/yassirportfolio/"
+languageCode = "fr-fr"
+title = "Yassir Amjoud | Ingénieur Systèmes Embarqués"
+theme = "hugo-profile"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params]
+  title = "Yassir Amjoud"
+  description = "Élève Ingénieur en Systèmes Embarqués — INPT Rabat"
+  favicon = "/images/favicon.ico"
+  useBootstrapCDN = true
+  animate = true
+
+  [params.font]
+    fontSize = "1rem"
+    fontWeight = 400
+    lineHeight = 1.5
+    textAlign = "left"
+
+  [params.navbar]
+    align = "ms-auto"
+    brandName = "Yassir Amjoud"
+    disableSearch = false
+
+    [params.navbar.menus]
+      disableAbout = false
+      disableExperience = false
+      disableEducation = false
+      disableProjects = false
+      disableAchievements = false
+      disableContact = false
+
+  [params.hero]
+    enable = true
+    intro = "Bonjour, je suis"
+    title = "Yassir Amjoud"
+    subtitle = "Élève Ingénieur en Systèmes Embarqués"
+    content = "Passionné par le co-design matériel/logiciel, les architectures temps réel et les systèmes embarqués. Étudiant à l'INPT Rabat."
+    image = "/images/photo.jpeg"
+
+    [params.hero.bottomImage]
+      enable = true
+
+    [params.hero.button]
+      enable = true
+      name = "Télécharger mon CV"
+      url = "/cv/cv.pdf"
+      download = true
+      newPage = false
+
+    [[params.hero.socialLinks.fontAwesomeIcons]]
+      icon = "fab fa-github"
+      url = "https://github.com/sanjisama71"
+
+    [[params.hero.socialLinks.fontAwesomeIcons]]
+      icon = "fab fa-linkedin"
+      url = "https://linkedin.com/in/yassiramjoud"
+
+  [params.about]
+    enable = true
+    title = "À propos de moi"
+    image = "/images/photo.jpeg"
+    content = "Je suis Yassir Amjoud, élève ingénieur en Systèmes Embarqués (SESNUM) à l'INPT de Rabat. Passionné par le co-design matériel/logiciel, les microcontrôleurs, FPGA et systèmes temps réel."
+
+    [params.about.skills]
+      enable = true
+      title = "Technologies :"
+      items = ["C / Assembleur","VHDL / FPGA","ARM / PIC","MATLAB / Simulink","Java (POO)","SQL","Git / Linux","LaTeX"]
+
+  [params.experience]
+    enable = true
+
+    [[params.experience.items]]
+      job = "Élève Ingénieur — Systèmes Embarqués"
+      company = "INPT"
+      companyUrl = "https://inpt.ac.ma"
+      date = "2025 — Présent"
+      content = "Formation en co-design matériel/logiciel, microcontrôleurs ARM/PIC, FPGA, électronique numérique et RF."
+
+      [params.experience.items.featuredLink]
+        enable = true
+        name = "Voir l'INPT"
+        url = "https://inpt.ac.ma"
+
+    [[params.experience.items]]
+      job = "Étudiant CPGE"
+      company = "Classes Préparatoires"
+      date = "2023 — 2025"
+      content = "Formation intensive en Mathématiques, Physique et Sciences Industrielles. Algorithmique Python et SQL."
+
+  [params.education]
+    enable = true
+
+    [[params.education.items]]
+      title = "Cycle Ingénieur — Systèmes Embarqués (SESNUM)"
+      date = "2025 — Présent"
+      GPA = "INPT Rabat"
+      content = "VHDL/FPGA, ARM/PIC, RTOS, RF et Micro-ondes, Bus et Protocoles de Communication."
+
+      [params.education.items.featuredLink]
+        enable = true
+        url = "https://inpt.ac.ma"
+        name = "Site de l'INPT"
+
+    [[params.education.items]]
+      title = "Classes Préparatoires aux Grandes Écoles (CPGE)"
+      date = "2023 — 2025"
+      GPA = "Sciences Industrielles"
+      content = "Mathématiques, Physique, Sciences Industrielles, Python, SQL."
+
+  [params.achievements]
+    enable = true
+
+    [[params.achievements.items]]
+      title = "Hardware et Electronique"
+      content = "Electronique Numerique et Analogique, RF, VHDL, FPGA, Cadence."
+
+    [[params.achievements.items]]
+      title = "Systemes Embarques"
+      content = "C avance, Assembleur, ARM/PIC, RTOS, Ordonnancement."
+
+    [[params.achievements.items]]
+      title = "Outils et Simulation"
+      content = "MATLAB/Simulink, Quartus, ModelSim, Git, Linux, LaTeX."
+
+    [[params.achievements.items]]
+      title = "Software et Data"
+      content = "Java POO, SQL, Signaux et Systemes, Developpement Web."
+
+  [params.projects]
+    enable = true
+
+    [[params.projects.items]]
+      title = "Projet Orion 7 - Base de Donnees"
+      content = "Modelisation ERD, requetes SQL complexes, documentation LaTeX."
+      image = "/images/projects/orion7.png"
+      badges = ["SQL", "LaTeX", "ERD"]
+
+      [[params.projects.items.links]]
+        icon = "fab fa-github"
+        url = "https://github.com/sanjisama71"
+
+    [[params.projects.items]]
+      title = "Projet Co-Design Materiel/Logiciel"
+      content = "Application embarquee : VHDL/FPGA + C/Microcontroleur. Contraintes temps reel."
+      image = "/images/projects/codesign.png"
+      badges = ["VHDL", "FPGA", "C", "RTOS"]
+
+      [[params.projects.items.links]]
+        icon = "fab fa-github"
+        url = "https://github.com/sanjisama71"
+
+  [params.contact]
+    enable = true
+    title = "Contactez-moi"
+    content = "Disponible pour stages, projets ou collaborations."
+    btnName = "Envoyer un email"
+    btnLink = "mailto:yasseramjoud18@gmail.com"
+
+[menu]
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blogs"
+    weight = 1
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
